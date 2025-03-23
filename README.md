@@ -14,8 +14,6 @@
 ✅ **Configurable Parameters**: User-controlled grid size, divergence threshold, and step size.  
 ✅ **Visualization with Matplotlib**: Generates color-coded plots highlighting paths.  
 
----
-
 ## 🚀 Applications in VLSI & Physical Design
 
 ### 1️⃣ **Clock & Data Signal Routing**
@@ -30,8 +28,6 @@
 ### 3️⃣ **Routing in Advanced VLSI Nodes**
 - In **sub-10nm process nodes**, reducing **wire congestion** is crucial for **timing closure**.
 - Our approach **minimizes wirelength** and **reuses common paths**, helping in **power, performance, and area (PPA) optimization**.
-
----
 
 ## Algorithm Workflow  
 1. **First Path Calculation**  
