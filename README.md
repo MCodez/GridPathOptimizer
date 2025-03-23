@@ -33,6 +33,7 @@ git clone https://github.com/yourusername/GridPathOptimizer.git
 cd GridPathOptimizer
 
 python pathfinder.py
+```
 
 ## Output Visualization
 
