@@ -10,8 +10,28 @@
 ✅ **Divergence Point Calculation**: Identifies the best point of deviation for new paths.  
 ✅ **Shortest Path Fallback**: If the divergence-based path is significantly longer, it switches to a direct shortest path.  
 ✅ **Obstacle Handling**: Supports polygonal obstacles to avoid restricted areas.  
+✅ **VLSI-Aware Routing** – Optimized for **clock tree synthesis (CTS)** and **data signal routing** in **chip design**.  
 ✅ **Configurable Parameters**: User-controlled grid size, divergence threshold, and step size.  
 ✅ **Visualization with Matplotlib**: Generates color-coded plots highlighting paths.  
+
+---
+
+## 🚀 Applications in VLSI & Physical Design
+
+### 1️⃣ **Clock & Data Signal Routing**
+- In **VLSI physical design**, **clock distribution networks** need optimized routing to reduce skew and power consumption.
+- This algorithm can **optimize clock tree synthesis (CTS)** by **reusing existing paths** instead of computing independent shortest paths for each signal.  
+- It can also **improve bus routing** in **SoC interconnect designs**.
+
+### 2️⃣ **Multi-Net Optimization in PCB & Chip Layouts**
+- **PCB trace routing** and **IC interconnect optimization** can use this algorithm to **reduce metal layer usage**.
+- Can be used for **multi-net signal routing** in **MCM (Multi-Chip Modules)** and **3D-IC** designs.
+
+### 3️⃣ **Routing in Advanced VLSI Nodes**
+- In **sub-10nm process nodes**, reducing **wire congestion** is crucial for **timing closure**.
+- Our approach **minimizes wirelength** and **reuses common paths**, helping in **power, performance, and area (PPA) optimization**.
+
+---
 
 ## Algorithm Workflow  
 1. **First Path Calculation**  
@@ -31,7 +51,10 @@
 ```sh
 git clone https://github.com/yourusername/GridPathOptimizer.git
 cd GridPathOptimizer
+```
 
+### 2️⃣ Run the code
+```
 python pathfinder.py
 ```
 
