@@ -6,7 +6,7 @@
 ## Features  
 ✅ **Grid-Based Movement**: Horizontal & vertical traversal with a configurable grid step size.  
 ✅ **Optimized Path Selection**: Prioritizes common paths to minimize redundancy.  
-✅ **A* Algorithm for Pathfinding**: Uses an optimized **A-star (A*) search** for shortest path computation.  
+✅ **A(*) Algorithm for Pathfinding**: Uses an optimized **A-star (A*) search** for shortest path computation.  
 ✅ **Divergence Point Calculation**: Identifies the best point of deviation for new paths.  
 ✅ **Shortest Path Fallback**: If the divergence-based path is significantly longer, it switches to a direct shortest path.  
 ✅ **Obstacle Handling**: Supports polygonal obstacles to avoid restricted areas.  
@@ -33,3 +33,9 @@ git clone https://github.com/yourusername/GridPathOptimizer.git
 cd GridPathOptimizer
 
 python pathfinder.py
+
+## Output Visualization
+
+Below is the generated path visualization from the algorithm:
+
+![Path Visualization](output.png)
