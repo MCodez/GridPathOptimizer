@@ -25,8 +25,11 @@
    - Plots all paths in a uniform color with **directional arrows**.  
    - Highlights start and end points distinctly.  
 
-## Installation  
-### Clone the repository:  
+## How to Run  
+
+### 1️⃣ Clone the Repository  
 ```sh
 git clone https://github.com/yourusername/GridPathOptimizer.git
 cd GridPathOptimizer
+
+python pathfinder.py
