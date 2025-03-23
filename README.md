@@ -38,4 +38,4 @@ python pathfinder.py
 
 Below is the generated path visualization from the algorithm:
 
-![Path Visualization](output.png)
+![Path Visualization](https://github.com/MCodez/GridPathOptimizer/blob/main/output.png)
