@@ -1,7 +1,7 @@
 # GridPathOptimizer: Efficient Pathfinding with A* and Common Path Selection  
 
 ## Overview  
-**GridPathOptimizer** is an intelligent **pathfinding algorithm** that efficiently finds **shortest paths** in a 2D coordinate space while maximizing **common path utilization**. Unlike traditional **A* algorithms**, this approach ensures that new paths reuse existing paths as much as possible, reducing unnecessary deviations and optimizing routing efficiency.  
+**GridPathOptimizer** is an intelligent **pathfinding algorithm** that efficiently finds **shortest paths** in a 2D coordinate space while maximizing **common path utilization**. A **power-aware** and **obstacle-aware** pathfinding algorithm designed for **VLSI routing**, specifically for **data and clock signal routing**. The algorithm minimizes **power domain crossings**, optimizes **shortest paths**, and intelligently utilizes **divergent paths** to ensure efficient signal propagation.
 
 ## Features  
 ✅ **Grid-Based Movement**: Horizontal & vertical traversal with a configurable grid step size.  
@@ -11,6 +11,7 @@
 ✅ **Shortest Path Fallback**: If the divergence-based path is significantly longer, it switches to a direct shortest path.  
 ✅ **Obstacle Handling**: Supports polygonal obstacles to avoid restricted areas.  
 ✅ **VLSI-Aware Routing** – Optimized for **clock tree synthesis (CTS)** and **data signal routing** in **chip design**.  
+✅ **Power Domain Awareness** – Ensures paths remain within the same power domain as much as possible, minimizing crossings.  
 ✅ **Configurable Parameters**: User-controlled grid size, divergence threshold, and step size.  
 ✅ **Visualization with Matplotlib**: Generates color-coded plots highlighting paths.  
 
@@ -41,6 +42,14 @@
    - Plots all paths in a uniform color with **directional arrows**.  
    - Highlights start and end points distinctly.  
 
+## 🎯 How Power Aware Routing Algorithm Works  
+1️⃣ The grid is divided into **different power domains** (Pink, Green, Blue).  
+2️⃣ User-defined **obstacles** are placed in the grid to simulate real-world constraints.  
+3️⃣ The algorithm finds the **shortest path** while **minimizing power domain crossings**.  
+4️⃣ If a direct path is **blocked**, it uses **divergent routing** from existing paths.  
+5️⃣ Each grid step has a **base cost**, and **power domain crossings** have a **high penalty (1000 units)**.  
+6️⃣ The final path is **selected based on total cost** (shortest and least domain crossings).  
+
 ## How to Run  
 
 ### 1️⃣ Clone the Repository  
@@ -52,6 +61,7 @@ cd GridPathOptimizer
 ### 2️⃣ Run the code
 ```
 python pathfinder.py
+python pathfinder_power_aware.py
 ```
 
 ## Output Visualization
@@ -59,3 +69,4 @@ python pathfinder.py
 Below is the generated path visualization from the algorithm:
 
 ![Path Visualization](output.png?)
+![Power Aware Routing Path Visualization](power_aware_routing.png?)
